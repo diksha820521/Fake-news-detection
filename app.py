@@ -13,8 +13,8 @@ st.set_page_config(
 
 # --- Load Model and Vectorizer (Keep this the same) ---
 try:
-    vectorizer = joblib.load("vectorizer.jb")
-    model = joblib.load("lr_model.jb")
+    vectorizer = joblib.load("vectorizer.joblib")
+    model = joblib.load("lr_model.joblib")
 except FileNotFoundError:
     st.error("Error: Model files (vectorizer.jb or lr_model.jb) not found. Please ensure they are in the same directory.")
     st.stop() # Stop the app if files are missing
